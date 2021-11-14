@@ -1,0 +1,3 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-au'
+title = 'Intro to Hugo'
