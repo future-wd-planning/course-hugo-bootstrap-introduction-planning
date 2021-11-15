@@ -1,14 +1,14 @@
 {{ define "main" }}
-<div class="container col-xxl-10">
-  <div class="row justify-content-center py-5 g-5">
-    <div class="col-10 col-sm-8 col-lg-6">
+<div class="container">
+  <div class="row align-content-center justify-content-center py-5 g-5">
+    <div class="col-lg-6">
       <img src="/img/bootstrap-themes.png" class="d-block mx-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
     </div>
     <div class="col-lg-6 order-lg-first">
-      <h1 class="display-5 fw-bold lh-1 mb-3">{{ .Title }}</h1>
-        <p class="lead">{{ .Content | plainify }}</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          {{ with .Params.btn1.text }}<button type="button" class="btn btn-primary btn-lg px-4 me-md-2" {{ with $.Params.btn1.link }}href="{{ . }}"{{ end }}>{{ . }}</button>{{ end }}
+      <h1 class="mb-3">{{ .Title }}</h1>
+        <p>{{ .Content }}</p>
+        <div>
+          {{ with .Params.btn1.text }}<button type="button" class="btn btn-primary btn-lg px-4 me-2" {{ with $.Params.btn1.link }}href="{{ . }}"{{ end }}>{{ . }}</button>{{ end }}
           {{ with .Params.btn2.text }}<button type="button" class="btn btn-outline-secondary btn-lg px-4" {{ with $.Params.btn2.link }}href="{{ . }}"{{ end }}>{{ . }}</button>{{ end }}
         </div>
     </div>
