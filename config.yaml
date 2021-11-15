@@ -1,3 +1,17 @@
 baseURL: http://example.org/
 languageCode: en-au
 title: Intro to Hugo
+
+# menu links via config file
+menu:
+  main:
+  - name: Github
+    url: http://www.github.com
+    weight: 90
+    params:
+      blank: true
+  - name: Google
+    url: http://www.google.com
+    weight: 100
+    params:
+      blank: true
