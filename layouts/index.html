@@ -1,17 +1,77 @@
 {{ define "main" }}
-<div class="container col-xxl-8">
-  <div class="row align-items-center justify-content-center py-5 g-5">
-    <div class="col-10 col-sm-8 col-lg-6">
-      <img src="/img/bootstrap-themes.png" class="d-block mx-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-    </div>
-    <div class="col-lg-6 order-lg-first">
-      <h1 class="display-5 fw-bold lh-1 mb-3">{{ .Title }}</h1>
+<section>
+  <div class="container col-xxl-8">
+    <div class="row align-items-center justify-content-center py-5 g-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="/img/bootstrap-themes.png" class="d-block mx-auto img-fluid" alt="Bootstrap Themes" width="700"
+          height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6 order-lg-first">
+        <h1 class="display-5 fw-bold lh-1 mb-3">{{ .Title }}</h1>
         <p class="lead">{{ .Content | plainify }}</p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          {{ with .Params.btn1.text }}<button type="button" class="btn btn-primary btn-lg px-4 me-md-2" {{ with $.Params.btn1.link }}href="{{ . }}"{{ end }}>{{ . }}</button>{{ end }}
-          {{ with .Params.btn2.text }}<button type="button" class="btn btn-outline-secondary btn-lg px-4" {{ with $.Params.btn2.link }}href="{{ . }}"{{ end }}>{{ . }}</button>{{ end }}
+          {{ with .Params.btn1.text }}<button type="button" class="btn btn-primary btn-lg px-4 me-md-2" {{ with
+            $.Params.btn1.link }}href="{{ . }}" {{ end }}>{{ . }}</button>{{ end }}
+          {{ with .Params.btn2.text }}<button type="button" class="btn btn-outline-secondary btn-lg px-4" {{ with
+            $.Params.btn2.link }}href="{{ . }}" {{ end }}>{{ . }}</button>{{ end }}
         </div>
+      </div>
     </div>
   </div>
-</div>
+</section>
+<section>
+  <div class="container py-3">
+    <div class="row">
+      <div class="col text-center">
+        <h2 class="fs-1 pb-3">Our Services</h2>
+      </div>
+    </div>
+    <!-- <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="/img/placeholder1.jpg" width="640" height="427" class="card-img-top img-fluid" alt="Card 1">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="/img/placeholder2.jpg" width="640" height="427" class="card-img-top img-fluid" alt="Card 2">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="/img/placeholder3.jpg" width="640" height="427" class="card-img-top img-fluid" alt="Card 3">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div> 
+    </div>-->
+    <div class="row row-cols-1 {{ printf "row-cols-md-%v" (len .Params.cards) }}">
+    {{ range .Params.cards }}
+      <div class="col pb-3">
+        <div class="card">
+          <img src="{{ .image }}" width="640" height="427" class="card-img-top img-fluid" alt="{{ .title }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ .title }}</h5>
+            <p class="card-text">{{ .text }}</p>
+            <a href="{{ with .linkUrl }}{{ . }}{{ end }}" class="btn btn-primary">{{ with .linkText }}{{ . }}{{ end }}</a>
+          </div>
+        </div>
+      </div>
+    {{ end }}
+    </div>
+  </div>
+</section>
 {{ end }}
