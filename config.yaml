@@ -1,7 +1,7 @@
 baseURL: http://example.org/
 languageCode: en-au
 title: Intro to Hugo
-
+# copyright: Custom Company Name
 # menu links via config file
 menu:
   main:
