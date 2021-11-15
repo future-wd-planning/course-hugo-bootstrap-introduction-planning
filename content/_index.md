@@ -2,6 +2,10 @@
 title: "We have all of the products that you need..."
 date: 2021-11-14T22:19:47+11:00
 draft: false
+menu:
+  main:
+    name: Home
+weight: 10
 btn1:
   text: Primary
   link: #
