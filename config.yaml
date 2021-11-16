@@ -2,6 +2,7 @@ baseURL: http://example.org/
 languageCode: en-au
 title: Intro to Hugo
 # copyright: Custom Company Name
+
 # menu links via config file
 menu:
   main:
@@ -15,3 +16,10 @@ menu:
     weight: 100
     params:
       blank: true
+
+
+# this is required so that Hugo will render markdown to HTML
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
