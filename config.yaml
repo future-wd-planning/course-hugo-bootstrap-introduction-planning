@@ -1,3 +1,10 @@
 baseURL: http://example.org/
 languageCode: en-au
 title: Intro to Hugo
+
+
+# this is required so that Hugo will render markdown to HTML
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
