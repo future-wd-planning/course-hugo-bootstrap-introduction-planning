@@ -17,6 +17,10 @@ title: Intro to Hugo
 #     params:
 #       blank: true
 
+# controls how many items appear on each page when paginating
+paginate: 3
+# controls the approx word count (rounded to sentences) in a list summary
+summaryLength: 30
 
 # this is required so that Hugo will render markdown to HTML
 markup:
