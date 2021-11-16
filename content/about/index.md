@@ -4,7 +4,7 @@ date: 2021-11-15T23:23:10+11:00
 draft: false
 subtitle: Serving the local community since 2001
 menu: main
-weight: 20
+weight: 30
 ---
 About us est nulla duis dolor minim non ex consectetur culpa duis. Reprehenderit aute consectetur do dolore laborum et fugiat. Cupidatat sunt dolore laboris ullamco proident ullamco id veniam laborum in quis pariatur. Ex cupidatat tempor elit et adipisicing quis. Enim aliquip pariatur id veniam ut eiusmod quis ullamco elit qui deserunt commodo. Pariatur incididunt pariatur do qui ex ex incididunt. Eu eiusmod ea reprehenderit amet ad sunt in proident ex culpa id laborum.
 
