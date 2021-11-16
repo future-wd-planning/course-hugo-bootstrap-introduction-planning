@@ -15,3 +15,9 @@ menu:
     weight: 100
     params:
       blank: true
+
+# this is required so that Hugo will render markdown to HTML
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
