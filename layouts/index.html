@@ -1,7 +1,4 @@
 {{ define "main" }}
-
 {{ .Site.Title }}
-
-{{ .Content }}
-
+{{ .Content | markdownify }}
 {{ end }}
